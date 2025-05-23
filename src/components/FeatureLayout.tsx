@@ -84,7 +84,7 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = ({
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">
-              This is what we offer
+              Lo que ofrecemos
             </h2>
             
             <div className="space-y-16">
