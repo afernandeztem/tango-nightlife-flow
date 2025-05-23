@@ -2,28 +2,31 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const ProblemsSection = () => {
+  const { t } = useTranslation();
+  
   const problems = [
     {
       emoji: '📉',
-      title: 'Alta tasa de fracaso',
-      description: 'El 60% de los locales quiebra antes de cumplir 3 años.'
+      title: t('problems.highFailure.title'),
+      description: t('problems.highFailure.description')
     },
     {
       emoji: '🤷',
-      title: 'Falta de control',
-      description: 'Cero control sobre ventas de RRPP, promotores y redes.'
+      title: t('problems.noControl.title'),
+      description: t('problems.noControl.description')
     },
     {
       emoji: '⚙️',
-      title: 'Flexibilidad limitada',
-      description: 'Cambiar precios en mitad de la noche es casi imposible.'
+      title: t('problems.limitedFlexibility.title'),
+      description: t('problems.limitedFlexibility.description')
     },
     {
       emoji: '🕵️',
-      title: 'Sin datos, sin mejoras',
-      description: 'Sin datos de clientes no hay servicio que mejore.'
+      title: t('problems.noData.title'),
+      description: t('problems.noData.description')
     },
   ];
 
@@ -57,10 +60,10 @@ const ProblemsSection = () => {
       >
         <motion.div className="text-center max-w-3xl mx-auto mb-20" variants={itemVariants}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-black">
-            Los retos de la gestión nocturna <span className="text-gray-800">que te quitan el sueño</span>
+            {t('home.problemsTitle')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600">
-            La industria del ocio nocturno enfrenta desafíos únicos que pueden hacer la diferencia entre el éxito y el fracaso.
+            {t('home.problemsSubtitle')}
           </p>
         </motion.div>
 
@@ -84,7 +87,7 @@ const ProblemsSection = () => {
 
         <motion.div className="mt-20 text-center" variants={itemVariants}>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Estos problemas no son inevitables. Con las herramientas adecuadas, puedes transformar estos desafíos en oportunidades de crecimiento para tu negocio.
+            {t('home.problemsConclusion')}
           </p>
         </motion.div>
       </motion.div>

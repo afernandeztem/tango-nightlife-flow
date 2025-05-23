@@ -2,8 +2,11 @@
 import React from 'react';
 import ButtonCTA from './ui/button-cta';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const CTASection = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="cta-final" className="py-32">
       <div className="container mx-auto px-6">
@@ -20,11 +23,11 @@ const CTASection = () => {
           {/* Content */}
           <div className="relative py-20 px-8 md:py-24 md:px-12 text-center">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-10 max-w-4xl mx-auto leading-tight">
-              Noches épicas empiezan con datos épicos
+              {t('home.ctaTitle')}
             </h2>
             
             <p className="text-white text-lg md:text-xl opacity-90 mb-12 max-w-2xl mx-auto">
-              Únete a los cientos de negocios de ocio nocturno que están revolucionando su forma de operar y aumentando sus beneficios con TangoApp.
+              {t('home.ctaSubtitle')}
             </p>
             
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
@@ -34,7 +37,7 @@ const CTASection = () => {
                 href="#form"
                 className="bg-white text-tango-pink hover:bg-white/90 shadow-xl"
               >
-                Empieza ahora – Gratis
+                {t('header.startNow')}
               </ButtonCTA>
               <ButtonCTA 
                 variant="outline" 
@@ -42,7 +45,7 @@ const CTASection = () => {
                 href="#form"
                 className="border-white text-white hover:bg-white/10"
               >
-                Solicita una demo
+                {t('header.requestDemo')}
               </ButtonCTA>
             </div>
           </div>

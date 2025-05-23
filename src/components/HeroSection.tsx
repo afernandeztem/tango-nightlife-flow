@@ -3,8 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 import ButtonCTA from './ui/button-cta';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const [isLoaded, setIsLoaded] = useState(false);
   
   // Simulate lazy loading of the animation
@@ -32,7 +34,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-black"
             >
-              Software de gestión nocturna que hace <span className="text-tango-pink">bailar tus ingresos</span>.
+              {t('home.heroTitle')}
             </motion.h1>
             
             <motion.p 
@@ -41,7 +43,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              Vende entradas, consumiciones y fideliza a tus clientes desde una sola plataforma.
+              {t('home.heroDescription')}
             </motion.p>
 
             {/* Verticals ticker */}
@@ -67,10 +69,10 @@ const HeroSection = () => {
               className="flex flex-col md:flex-row items-center justify-center lg:justify-start space-y-4 md:space-y-0 md:space-x-6"
             >
               <ButtonCTA variant="primary" size="lg" href="#form">
-                Empieza ahora – Gratis <ArrowDown className="ml-2 w-4 h-4" />
+                {t('header.startNow')} <ArrowDown className="ml-2 w-4 h-4" />
               </ButtonCTA>
               <ButtonCTA variant="outline" size="lg" href="#form">
-                Solicita una demo
+                {t('header.requestDemo')}
               </ButtonCTA>
             </motion.div>
           </div>

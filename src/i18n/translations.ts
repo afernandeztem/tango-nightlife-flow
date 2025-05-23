@@ -16,9 +16,26 @@ export const translations = {
     // Home page
     'home.heroTitle': 'Transform your nightlife business',
     'home.heroSubtitle': 'Complete platform for managing nightlife venues',
-    'home.problemsTitle': 'Problems we solve',
+    'home.heroDescription': 'Sell tickets, drinks and build customer loyalty from a single platform.',
+    'home.problemsTitle': 'Nightlife management challenges that keep you up at night',
+    'home.problemsSubtitle': 'The nightlife industry faces unique challenges that can make the difference between success and failure.',
+    'home.problemsConclusion': 'These problems are not inevitable. With the right tools, you can transform these challenges into growth opportunities for your business.',
     'home.solutionsTitle': 'Solutions that transform your nightlife business',
     'home.solutionsSubtitle': 'Optimize every aspect of your venue with tools designed specifically for the nightlife sector.',
+    'home.casesTitle': 'Success stories that speak for themselves',
+    'home.casesSubtitle': 'Discover how different nightlife businesses are transforming their operations and results with TangoApp.',
+    'home.ctaTitle': 'Epic nights start with epic data',
+    'home.ctaSubtitle': 'Join the hundreds of nightlife businesses that are revolutionizing their operations and increasing their profits with TangoApp.',
+    
+    // Problems
+    'problems.highFailure.title': 'High failure rate',
+    'problems.highFailure.description': '60% of venues close before their 3rd anniversary.',
+    'problems.noControl.title': 'Lack of control',
+    'problems.noControl.description': 'Zero control over PR sales, promoters and networks.',
+    'problems.limitedFlexibility.title': 'Limited flexibility',
+    'problems.limitedFlexibility.description': 'Changing prices mid-night is almost impossible.',
+    'problems.noData.title': 'No data, no improvement',
+    'problems.noData.description': 'Without customer data there is no service that improves.',
     
     // Solutions
     'solutions.tickets.title': 'Ticket Sales',
@@ -35,6 +52,24 @@ export const translations = {
     'solutions.reporting.description': 'Dashboard with key metrics: revenue, attendance, average consumption and comparative trends.',
     'solutions.roles.title': 'Roles & Permissions',
     'solutions.roles.description': 'Granular access control by role: manager, supervisor, bartender, cashier or promoter.',
+    
+    // Cases
+    'cases.luxe.title': 'LUXE Nightclub',
+    'cases.luxe.stat': '+27%',
+    'cases.luxe.description': 'Increase in average ticket per customer',
+    'cases.luxe.text': 'By implementing our drinks sales and loyalty system, LUXE managed to increase consumption per customer and streamline bar service during peak hours.',
+    'cases.soundwave.title': 'SoundWave Festival',
+    'cases.soundwave.stat': '5h',
+    'cases.soundwave.description': 'Weekly savings in promoter management',
+    'cases.soundwave.text': 'With the promoter control module, the SoundWave team automated payments and commissions, eliminating errors and disputes while expanding their sales network.',
+    'cases.sunset.title': 'Ibiza Sunset Club',
+    'cases.sunset.stat': '+40%',
+    'cases.sunset.description': 'Increase in customer return rate',
+    'cases.sunset.text': 'Thanks to the CRM and loyalty system, they managed to identify and reward their best customers, creating personalized experiences that multiplied their visits.',
+    'cases.irish.title': 'Irish Pub Network',
+    'cases.irish.stat': '18%',
+    'cases.irish.description': 'Reduction in operational costs',
+    'cases.irish.text': 'The pub chain implemented our roles and permissions system along with real-time reporting, optimizing their staff and reducing losses from errors or fraud.',
     
     // Feature pages
     'features.sales.title': 'Comprehensive sales system',
@@ -111,11 +146,28 @@ export const translations = {
     'common.whatWeOffer': 'Lo que ofrecemos',
     
     // Home page
-    'home.heroTitle': 'Transforma tu negocio nocturno',
+    'home.heroTitle': 'Software de gestión nocturna que hace bailar tus ingresos',
     'home.heroSubtitle': 'Plataforma completa para gestionar locales de ocio nocturno',
-    'home.problemsTitle': 'Problemas que resolvemos',
+    'home.heroDescription': 'Vende entradas, consumiciones y fideliza a tus clientes desde una sola plataforma.',
+    'home.problemsTitle': 'Los retos de la gestión nocturna que te quitan el sueño',
+    'home.problemsSubtitle': 'La industria del ocio nocturno enfrenta desafíos únicos que pueden hacer la diferencia entre el éxito y el fracaso.',
+    'home.problemsConclusion': 'Estos problemas no son inevitables. Con las herramientas adecuadas, puedes transformar estos desafíos en oportunidades de crecimiento para tu negocio.',
     'home.solutionsTitle': 'Soluciones que transforman tu negocio nocturno',
     'home.solutionsSubtitle': 'Optimiza cada aspecto de tu local con herramientas diseñadas específicamente para el sector del ocio nocturno.',
+    'home.casesTitle': 'Casos de éxito que hablan por sí solos',
+    'home.casesSubtitle': 'Descubre cómo diferentes negocios de ocio nocturno están transformando su operativa y resultados con TangoApp.',
+    'home.ctaTitle': 'Noches épicas empiezan con datos épicos',
+    'home.ctaSubtitle': 'Únete a los cientos de negocios de ocio nocturno que están revolucionando su forma de operar y aumentando sus beneficios con TangoApp.',
+    
+    // Problems
+    'problems.highFailure.title': 'Alta tasa de fracaso',
+    'problems.highFailure.description': 'El 60% de los locales quiebra antes de cumplir 3 años.',
+    'problems.noControl.title': 'Falta de control',
+    'problems.noControl.description': 'Cero control sobre ventas de RRPP, promotores y redes.',
+    'problems.limitedFlexibility.title': 'Flexibilidad limitada',
+    'problems.limitedFlexibility.description': 'Cambiar precios en mitad de la noche es casi imposible.',
+    'problems.noData.title': 'Sin datos, sin mejoras',
+    'problems.noData.description': 'Sin datos de clientes no hay servicio que mejore.',
     
     // Solutions
     'solutions.tickets.title': 'Venta de entradas',
@@ -132,6 +184,24 @@ export const translations = {
     'solutions.reporting.description': 'Dashboard con métricas clave: ingresos, asistencia, consumo medio y tendencias comparativas.',
     'solutions.roles.title': 'Roles & permisos',
     'solutions.roles.description': 'Control granular de accesos por rol: gerente, encargado, camarero, taquillero o promotor.',
+    
+    // Cases
+    'cases.luxe.title': 'Discoteca LUXE',
+    'cases.luxe.stat': '+27%',
+    'cases.luxe.description': 'Aumento del ticket medio por cliente',
+    'cases.luxe.text': 'Implementando nuestro sistema de venta de consumiciones y fidelización, LUXE logró incrementar el consumo por cliente y agilizar el servicio en barras durante las horas punta.',
+    'cases.soundwave.title': 'Festival SoundWave',
+    'cases.soundwave.stat': '5h',
+    'cases.soundwave.description': 'Ahorro semanal en gestión de promotores',
+    'cases.soundwave.text': 'Con el módulo de control de promotores, el equipo de SoundWave automatizó pagos y comisiones, eliminando errores y disputas mientras aumentaba su red de ventas.',
+    'cases.sunset.title': 'Ibiza Sunset Club',
+    'cases.sunset.stat': '+40%',
+    'cases.sunset.description': 'Incremento en tasa de retorno de clientes',
+    'cases.sunset.text': 'Gracias al CRM y sistema de fidelización, lograron identificar y premiar a sus mejores clientes, creando experiencias personalizadas que multiplicaron sus visitas.',
+    'cases.irish.title': 'Irish Pub Network',
+    'cases.irish.stat': '18%',
+    'cases.irish.description': 'Reducción en costes operativos',
+    'cases.irish.text': 'La cadena de pubs implementó nuestro sistema de roles y permisos junto al reporting en tiempo real, optimizando su personal y reduciendo pérdidas por errores o fraude.',
     
     // Feature pages
     'features.sales.title': 'Sistema integral de ventas',

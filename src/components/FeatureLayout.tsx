@@ -63,7 +63,7 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = ({
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold mb-6 text-tango-purple">
-                ¿Qué es {title.split(' ').slice(0, 2).join(' ')}?
+                {title.split(' ').slice(0, 2).join(' ')}
               </h2>
               <p className="text-lg text-gray-700 mb-8">
                 {description}
