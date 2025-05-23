@@ -39,7 +39,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0"
             >
               Vende entradas, consumiciones y fideliza a tus clientes desde una sola plataforma.
             </motion.p>
@@ -50,7 +50,7 @@ const HeroSection = () => {
                 <div className="inline-flex items-center space-x-4 animate-ticker whitespace-nowrap">
                   {verticals.map((vertical, index) => (
                     <React.Fragment key={index}>
-                      <span className="text-tango-pink font-medium">{vertical}</span>
+                      <span className="text-gray-700 font-medium">{vertical}</span>
                       {index < verticals.length - 1 && (
                         <span className="text-gray-400">·</span>
                       )}
@@ -87,7 +87,7 @@ const HeroSection = () => {
                   <div className="bg-white rounded-[32px] h-full overflow-hidden border border-gray-100">
                     {/* Device mockup with app screenshot */}
                     <img
-                      src="https://placehold.co/320x650/ffffff/C5198F?text=TangoApp+Dashboard"
+                      src="https://placehold.co/320x650/ffffff/666666?text=TangoApp+Dashboard"
                       alt="TangoApp admin dashboard en un iPhone"
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -95,7 +95,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 {/* Decorative element */}
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-tango-pink opacity-30 blur-xl"></div>
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-gray-200 opacity-30 blur-xl"></div>
               </motion.div>
             ) : (
               <div className="w-[280px] md:w-[320px] h-[580px] md:h-[650px] bg-gray-100 rounded-[40px] animate-pulse"></div>

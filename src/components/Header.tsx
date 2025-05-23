@@ -24,6 +24,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -31,19 +35,22 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-tango-pink">
+        <button 
+          onClick={scrollToTop}
+          className="text-2xl font-bold text-black hover:text-gray-600 transition-colors duration-300"
+        >
           TangoApp
-        </Link>
+        </button>
         
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-8">
-            <a href="#soluciones" className="text-gray-800 hover:text-tango-pink font-medium transition duration-300">
+            <a href="#soluciones" className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-all duration-300">
               Soluciones
             </a>
-            <a href="#casos" className="text-gray-800 hover:text-tango-pink font-medium transition duration-300">
+            <a href="#casos" className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-all duration-300">
               Casos de Uso
             </a>
-            <a href="#testimonios" className="text-gray-800 hover:text-tango-pink font-medium transition duration-300">
+            <a href="#testimonios" className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-all duration-300">
               Testimonios
             </a>
           </nav>
@@ -59,7 +66,7 @@ const Header = () => {
         </div>
         
         <button 
-          className="md:hidden text-gray-800"
+          className="md:hidden text-gray-800 hover:text-black transition-colors duration-300"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -79,21 +86,21 @@ const Header = () => {
             <div className="container mx-auto px-6 py-6 flex flex-col space-y-6">
               <a 
                 href="#soluciones" 
-                className="text-gray-800 hover:text-tango-pink font-medium py-2 text-lg"
+                className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium text-lg transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Soluciones
               </a>
               <a 
                 href="#casos" 
-                className="text-gray-800 hover:text-tango-pink font-medium py-2 text-lg"
+                className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium text-lg transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Casos de Uso
               </a>
               <a 
                 href="#testimonios" 
-                className="text-gray-800 hover:text-tango-pink font-medium py-2 text-lg"
+                className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium text-lg transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Testimonios
