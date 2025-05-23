@@ -33,11 +33,6 @@ const Ventas = () => {
           title: "Beach club optimiza las barras con TPV inteligente",
           description: "Un beach club de Valencia instaló nuestro sistema de TPV inteligente en sus 5 barras. El sistema sugería automáticamente promociones según la hora del día (como happy hours) y recomendaba productos complementarios basados en el pedido inicial. Esto resultó en un incremento del 27% en el ticket medio y una reducción del 40% en el tiempo de atención por cliente. Los informes detallados permitieron identificar qué productos funcionaban mejor en cada momento del día, optimizando el inventario.",
           image: "https://placehold.co/600x400/6F3BFF/FFFFFF?text=TPV+Inteligente"
-        },
-        {
-          title: "Festival implementa pulseras RFID con saldo para consumo",
-          description: "Un festival de tres días sustituyó los tickets físicos por pulseras RFID con saldo precargado. Los asistentes podían recargar sus pulseras online o en puntos del recinto, y pagar todas sus consumiciones con solo un toque. Esto no solo mejoró la experiencia del usuario, sino que aumentó el gasto medio por asistente en un 34%, redujo el fraude en casi un 100% y proporcionó datos valiosos sobre patrones de consumo en diferentes zonas y horarios del festival.",
-          image: "https://placehold.co/600x400/9D4EDD/FFFFFF?text=Pulseras+RFID"
         }
       ]}
     />
