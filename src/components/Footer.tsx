@@ -2,8 +2,10 @@
 import React from 'react';
 import { Instagram, Facebook, Twitter, Linkedin, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -15,7 +17,7 @@ const Footer = () => {
               TangoApp
             </Link>
             <p className="text-gray-400 mb-6">
-              Software de gestión nocturna que hace bailar tus ingresos.
+              {t('footer.tagline')}
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -34,83 +36,83 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Soluciones</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.solutions')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/ventas" className="text-gray-400 hover:text-white transition-colors">
-                  Venta de entradas
+                  {t('footer.ticketSales')}
                 </Link>
               </li>
               <li>
                 <Link to="/ventas" className="text-gray-400 hover:text-white transition-colors">
-                  Venta de consumiciones
+                  {t('footer.drinkSales')}
                 </Link>
               </li>
               <li>
                 <Link to="/crm" className="text-gray-400 hover:text-white transition-colors">
-                  CRM
+                  {t('footer.crm')}
                 </Link>
               </li>
               <li>
                 <Link to="/fidelizacion" className="text-gray-400 hover:text-white transition-colors">
-                  Fidelización
+                  {t('footer.loyalty')}
                 </Link>
               </li>
               <li>
                 <Link to="/tiempo-real" className="text-gray-400 hover:text-white transition-colors">
-                  Reporting en tiempo real
+                  {t('footer.realTimeReporting')}
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Empresa</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.company')}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#testimonios" className="text-gray-400 hover:text-white transition-colors">
-                  Casos de éxito
+                  {t('footer.successCases')}
                 </a>
               </li>
               <li>
                 <a href="#form" className="text-gray-400 hover:text-white transition-colors">
-                  Contacto
+                  {t('footer.contact')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Sobre nosotros
+                  {t('footer.aboutUs')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Blog
+                  {t('footer.blog')}
                 </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Legal</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Política de privacidad
+                  {t('footer.privacyPolicy')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Términos y condiciones
+                  {t('footer.termsConditions')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Política de cookies
+                  {t('footer.cookiePolicy')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Aviso legal
+                  {t('footer.legalNotice')}
                 </a>
               </li>
             </ul>
@@ -119,16 +121,16 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} TangoApp. Todos los derechos reservados.
+            &copy; {currentYear} TangoApp. {t('footer.allRightsReserved')}
           </p>
           
           <div className="flex items-center">
             <button className="flex items-center text-gray-400 hover:text-white transition-colors">
               <Globe className="w-4 h-4 mr-2" />
-              <span>Español</span>
+              <span>{t('footer.spanish')}</span>
               <span className="mx-2 text-gray-600">|</span>
               <Link to="/en" className="text-gray-400 hover:text-white transition-colors">
-                English
+                {t('footer.english')}
               </Link>
             </button>
           </div>

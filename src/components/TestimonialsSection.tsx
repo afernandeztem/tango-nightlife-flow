@@ -2,30 +2,33 @@
 import React, { useRef, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlayCircle, PauseCircle, ExternalLink } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const TestimonialsSection = () => {
+  const { t } = useTranslation();
+  
   const testimonials = [
     {
       id: 'testimonial1',
-      name: 'Carlos Martínez',
-      role: 'Director de LUXE Madrid',
-      quote: '"Con TangoApp aumentamos nuestros ingresos un 35% en el primer trimestre. La gestión de promotores fue un cambio radical para nuestro negocio."',
+      name: t('testimonials.carlos.name'),
+      role: t('testimonials.carlos.role'),
+      quote: t('testimonials.carlos.quote'),
       videoPlaceholder: 'https://placehold.co/600x400/2D0D63/FFFFFF?text=Testimonial+LUXE',
       videoUrl: '#', // Replace with actual video URL
     },
     {
       id: 'testimonial2',
-      name: 'Sofía Blanco',
-      role: 'CEO de Beach Paradise',
-      quote: '"Nunca habíamos tenido tanto control sobre nuestras promociones. Podemos cambiar precios en tiempo real según la afluencia y eso ha optimizado nuestra rentabilidad."',
+      name: t('testimonials.sofia.name'),
+      role: t('testimonials.sofia.role'),
+      quote: t('testimonials.sofia.quote'),
       videoPlaceholder: 'https://placehold.co/600x400/6F3BFF/FFFFFF?text=Testimonial+Beach+Paradise',
       videoUrl: '#', // Replace with actual video URL
     },
     {
       id: 'testimonial3',
-      name: 'Miguel Ángel',
-      role: 'Promotor en SoundWave Festival',
-      quote: '"El sistema es transparente y finalmente recibo mis comisiones sin discusiones ni retrasos. Ha mejorado mi relación con los organizadores y mi productividad."',
+      name: t('testimonials.miguel.name'),
+      role: t('testimonials.miguel.role'),
+      quote: t('testimonials.miguel.quote'),
       videoPlaceholder: 'https://placehold.co/600x400/9D4EDD/FFFFFF?text=Testimonial+SoundWave',
       videoUrl: '#', // Replace with actual video URL
     },
@@ -58,10 +61,10 @@ const TestimonialsSection = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Lo que dicen nuestros <span className="gradient-text">clientes</span>
+            {t('home.testimonialsTitle')}
           </h2>
           <p className="text-lg text-gray-700">
-            Escucha las experiencias de quienes ya están transformando sus negocios con TangoApp.
+            {t('home.testimonialsSubtitle')}
           </p>
         </div>
 
@@ -123,7 +126,7 @@ const TestimonialsSection = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center text-tango-violet hover:underline font-medium"
           >
-            Más casos de éxito <ExternalLink className="ml-1 w-4 h-4" />
+            {t('testimonials.moreSuccessStories')} <ExternalLink className="ml-1 w-4 h-4" />
           </a>
         </div>
       </div>

@@ -18,7 +18,13 @@ const HeroSection = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const verticals = ['Discotecas', 'Beach Clubs', 'Festivales', 'Pubs', 'Eventos puntuales'];
+  const verticals = [
+    t('verticals.nightclubs'), 
+    t('verticals.beachClubs'), 
+    t('verticals.festivals'), 
+    t('verticals.pubs'), 
+    t('verticals.events')
+  ];
   
   return (
     <section id="hero" className="relative py-32 md:py-40 overflow-hidden">
