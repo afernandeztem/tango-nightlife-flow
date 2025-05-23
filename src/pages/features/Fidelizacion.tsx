@@ -2,21 +2,24 @@
 import React from 'react';
 import FeatureLayout from '@/components/FeatureLayout';
 import { Gift } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Fidelizacion = () => {
+  const { t } = useTranslation();
+
   return (
     <FeatureLayout
-      title="Sistemas de fidelización"
-      subtitle="Convierte clientes casuales en fans fieles con programas de puntos, niveles VIP y recompensas automáticas basadas en el historial del cliente."
-      description="Nuestro sistema de fidelización es una herramienta potente para retener clientes y aumentar su valor a lo largo del tiempo. Implementa programas de puntos personalizables, crea niveles VIP con beneficios exclusivos y automatiza recompensas basadas en patrones de comportamiento. Todo esto integrado con tu sistema de ventas y CRM para una experiencia fluida."
+      title={t('features.loyalty.title')}
+      subtitle={t('features.loyalty.subtitle')}
+      description={t('features.loyalty.description')}
       icon={<Gift className="w-12 h-12 text-tango-purple" />}
       benefits={[
-        "Aumenta la frecuencia de visitas hasta un 35% con programas de puntos.",
-        "Incrementa el gasto medio por cliente con recompensas estratégicas.",
-        "Mejora la experiencia con accesos VIP, consumiciones de cortesía y promociones exclusivas.",
-        "Automatiza el envío de ofertas en fechas especiales como cumpleaños.",
-        "Gamifica la experiencia con retos que fomentan comportamientos deseados.",
-        "Obtén análisis detallados sobre la efectividad de tus programas de fidelización."
+        t('features.loyalty.benefits.1'),
+        t('features.loyalty.benefits.2'),
+        t('features.loyalty.benefits.3'),
+        t('features.loyalty.benefits.4'),
+        t('features.loyalty.benefits.5'),
+        t('features.loyalty.benefits.6'),
       ]}
       useCases={[
         {

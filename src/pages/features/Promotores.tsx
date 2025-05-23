@@ -2,21 +2,24 @@
 import React from 'react';
 import FeatureLayout from '@/components/FeatureLayout';
 import { Users } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Promotores = () => {
+  const { t } = useTranslation();
+
   return (
     <FeatureLayout
-      title="Sistema de Promotores"
-      subtitle="Control total de tu red de promotores con códigos personalizados, comisiones automáticas y liquidaciones transparentes."
-      description="Nuestro sistema de gestión de promotores te permite administrar una red completa de colaboradores de manera eficiente y transparente. Cada promotor tiene su código único para trackear ventas en tiempo real, sistema de comisiones flexible con distintos porcentajes según volumen o tipo de entradas, y liquidación automática con informes detallados. Elimina disputas, ahorra tiempo administrativo y motiva a tu equipo con un sistema justo y transparente."
+      title={t('features.promoters.title')}
+      subtitle={t('features.promoters.subtitle')}
+      description={t('features.promoters.description')}
       icon={<Users className="w-12 h-12 text-tango-purple" />}
       benefits={[
-        "Códigos únicos de promotor para tracking completo de ventas y conversiones.",
-        "Sistema de comisiones flexible: porcentajes variables según volumen, tipo de entrada o temporada.",
-        "Liquidaciones automáticas con informes detallados para cada promotor.",
-        "Ranking de promotores en tiempo real para fomentar la competencia sana.",
-        "Integración con CRM para identificar qué promotores atraen mejores clientes.",
-        "Gestión de pagos automatizada con histórico completo de comisiones."
+        t('features.promoters.benefits.1'),
+        t('features.promoters.benefits.2'),
+        t('features.promoters.benefits.3'),
+        t('features.promoters.benefits.4'),
+        t('features.promoters.benefits.5'),
+        t('features.promoters.benefits.6'),
       ]}
       useCases={[
         {

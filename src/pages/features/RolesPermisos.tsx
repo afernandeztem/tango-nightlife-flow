@@ -2,21 +2,24 @@
 import React from 'react';
 import FeatureLayout from '@/components/FeatureLayout';
 import { ShieldCheck } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const RolesPermisos = () => {
+  const { t } = useTranslation();
+
   return (
     <FeatureLayout
-      title="Roles & Permisos"
-      subtitle="Control granular de accesos por rol: gerente, encargado, camarero, taquillero o promotor. Seguridad y privacidad garantizadas."
-      description="Nuestro sistema de roles y permisos te permite definir exactamente qué puede ver y hacer cada empleado en la plataforma. Los camareros solo acceden al TPV, los taquilleros a la venta de entradas, los encargados a informes específicos de su turno, y los gerentes a toda la información. Previene fraudes internos, garantiza la privacidad de datos sensibles y simplifica la formación de nuevo personal con interfaces adaptadas a cada rol."
+      title={t('features.roles.title')}
+      subtitle={t('features.roles.subtitle')}
+      description={t('features.roles.description')}
       icon={<ShieldCheck className="w-12 h-12 text-tango-purple" />}
       benefits={[
-        "Control granular: define exactamente qué puede ver y hacer cada empleado.",
-        "Interfaces adaptadas por rol para simplificar el trabajo diario.",
-        "Prevención de fraude interno con accesos restringidos a funciones críticas.",
-        "Trazabilidad completa: registro de quién hizo qué y cuándo.",
-        "Gestión multilocal con permisos específicos por venue.",
-        "Formación simplificada con interfaces limpias y específicas por puesto."
+        t('features.roles.benefits.1'),
+        t('features.roles.benefits.2'),
+        t('features.roles.benefits.3'),
+        t('features.roles.benefits.4'),
+        t('features.roles.benefits.5'),
+        t('features.roles.benefits.6'),
       ]}
       useCases={[
         {

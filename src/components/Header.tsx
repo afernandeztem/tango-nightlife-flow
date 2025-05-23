@@ -1,13 +1,15 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ButtonCTA from './ui/button-cta';
+import LanguageSelector from './LanguageSelector';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,33 +47,37 @@ const Header = () => {
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-8">
             <a href="#soluciones" className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-all duration-300">
-              Soluciones
+              {t('header.solutions')}
             </a>
             <a href="#casos" className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-all duration-300">
-              Casos de Uso
+              {t('header.cases')}
             </a>
             <a href="#testimonios" className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-all duration-300">
-              Testimonios
+              {t('header.testimonials')}
             </a>
           </nav>
           
           <div className="flex items-center space-x-4">
+            <LanguageSelector />
             <ButtonCTA variant="outline" size="sm" href="#form">
-              Solicita una demo
+              {t('header.requestDemo')}
             </ButtonCTA>
             <ButtonCTA variant="primary" size="sm" href="#form">
-              Empieza ahora – Gratis
+              {t('header.startNow')}
             </ButtonCTA>
           </div>
         </div>
         
-        <button 
-          className="md:hidden text-gray-800 hover:text-black transition-colors duration-300"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center space-x-2">
+          <LanguageSelector />
+          <button 
+            className="text-gray-800 hover:text-black transition-colors duration-300"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
       
       {/* Mobile menu with animation */}
@@ -89,28 +95,28 @@ const Header = () => {
                 className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium text-lg transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Soluciones
+                {t('header.solutions')}
               </a>
               <a 
                 href="#casos" 
                 className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium text-lg transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Casos de Uso
+                {t('header.cases')}
               </a>
               <a 
                 href="#testimonios" 
                 className="text-gray-700 hover:text-black hover:bg-gray-50 px-3 py-2 rounded-lg font-medium text-lg transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Testimonios
+                {t('header.testimonials')}
               </a>
               <div className="flex flex-col space-y-4 pt-4">
                 <ButtonCTA variant="outline" size="default" href="#form" onClick={() => setIsMenuOpen(false)}>
-                  Solicita una demo
+                  {t('header.requestDemo')}
                 </ButtonCTA>
                 <ButtonCTA variant="primary" size="default" href="#form" onClick={() => setIsMenuOpen(false)}>
-                  Empieza ahora – Gratis
+                  {t('header.startNow')}
                 </ButtonCTA>
               </div>
             </div>

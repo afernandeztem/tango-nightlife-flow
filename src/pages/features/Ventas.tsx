@@ -2,13 +2,16 @@
 import React from 'react';
 import FeatureLayout from '@/components/FeatureLayout';
 import { Ticket, Beer } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Ventas = () => {
+  const { t } = useTranslation();
+
   return (
     <FeatureLayout
-      title="Sistema integral de ventas"
-      subtitle="Gestiona entradas y consumiciones desde una única plataforma que maximiza tus ingresos con precios dinámicos y promociones inteligentes."
-      description="Nuestro sistema de ventas unificado te permite controlar tanto las entradas como las consumiciones desde una sola plataforma. Vende entradas online con precios dinámicos adaptados a la demanda, implementa promociones automáticas según la hora o nivel de ocupación, y gestiona múltiples barras con TPVs inteligentes que sugieren promociones y combos. Todo sincronizado en tiempo real para una visión global de los ingresos."
+      title={t('features.sales.title')}
+      subtitle={t('features.sales.subtitle')}
+      description={t('features.sales.description')}
       icon={
         <div className="flex">
           <Ticket className="w-10 h-10 text-tango-purple" />
@@ -16,12 +19,12 @@ const Ventas = () => {
         </div>
       }
       benefits={[
-        "Aumenta los ingresos por entrada con precios dinámicos basados en la demanda.",
-        "Incrementa el ticket medio en barra con promociones automáticas y sugerencias de venta cruzada.",
-        "Reduce tiempos de espera en la entrada y en barra con procesos optimizados.",
-        "Minimiza el fraude y las pérdidas con un control estricto de transacciones.",
-        "Simplifica la gestión con informes unificados de entradas y consumiciones.",
-        "Múltiples métodos de pago integrados: efectivo, tarjeta, pulseras RFID con saldo precargado y códigos QR."
+        t('features.sales.benefits.1'),
+        t('features.sales.benefits.2'),
+        t('features.sales.benefits.3'),
+        t('features.sales.benefits.4'),
+        t('features.sales.benefits.5'),
+        t('features.sales.benefits.6'),
       ]}
       useCases={[
         {

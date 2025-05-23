@@ -3,56 +3,59 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Ticket, Beer, UserPlus, Users, Gift, BarChart3, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const SolutionsSection = () => {
+  const { t } = useTranslation();
+  
   const solutions = [
     {
       id: 'entradas',
-      title: 'Venta de entradas',
+      title: t('solutions.tickets.title'),
       icon: <Ticket className="w-10 h-10 text-tango-violet" />,
-      description: 'Sistema completo para venta online y en taquilla, con precios dinámicos y control en tiempo real.',
+      description: t('solutions.tickets.description'),
       route: '/ventas'
     },
     {
       id: 'consumiciones',
-      title: 'Venta de consumiciones',
+      title: t('solutions.drinks.title'),
       icon: <Beer className="w-10 h-10 text-tango-violet" />,
-      description: 'TPV inteligente para barra con catálogo personalizable y promociones programables según la hora.',
+      description: t('solutions.drinks.description'),
       route: '/ventas'
     },
     {
       id: 'crm',
-      title: 'CRM',
+      title: t('solutions.crm.title'),
       icon: <UserPlus className="w-10 h-10 text-tango-violet" />,
-      description: 'Base de datos de clientes con historial de visitas, preferencias y comportamiento de compra.',
+      description: t('solutions.crm.description'),
       route: '/crm'
     },
     {
       id: 'promotores',
-      title: 'Promotores',
+      title: t('solutions.promoters.title'),
       icon: <Users className="w-10 h-10 text-tango-violet" />,
-      description: 'Control total de la red de promotores con códigos personalizados, comisiones y pagos automatizados.',
+      description: t('solutions.promoters.description'),
       route: '/promotores'
     },
     {
       id: 'fidelizacion',
-      title: 'Sistemas de fidelización',
+      title: t('solutions.loyalty.title'),
       icon: <Gift className="w-10 h-10 text-tango-violet" />,
-      description: 'Programa de puntos, niveles VIP y recompensas automáticas basadas en el historial del cliente.',
+      description: t('solutions.loyalty.description'),
       route: '/fidelizacion'
     },
     {
       id: 'reporting',
-      title: 'Reporting en tiempo real',
+      title: t('solutions.reporting.title'),
       icon: <BarChart3 className="w-10 h-10 text-tango-violet" />,
-      description: 'Dashboard con métricas clave: ingresos, asistencia, consumo medio y tendencias comparativas.',
+      description: t('solutions.reporting.description'),
       route: '/tiempo-real'
     },
     {
       id: 'permisos',
-      title: 'Roles & permisos',
+      title: t('solutions.roles.title'),
       icon: <ShieldCheck className="w-10 h-10 text-tango-violet" />,
-      description: 'Control granular de accesos por rol: gerente, encargado, camarero, taquillero o promotor.',
+      description: t('solutions.roles.description'),
       route: '/roles-permisos'
     }
   ];
@@ -67,10 +70,10 @@ const SolutionsSection = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Soluciones que <span className="gradient-text">transforman</span> tu negocio nocturno
+            {t('home.solutionsTitle')}
           </h2>
           <p className="text-lg text-gray-700">
-            Optimiza cada aspecto de tu local con herramientas diseñadas específicamente para el sector del ocio nocturno.
+            {t('home.solutionsSubtitle')}
           </p>
         </div>
 

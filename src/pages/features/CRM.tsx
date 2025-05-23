@@ -2,21 +2,24 @@
 import React from 'react';
 import FeatureLayout from '@/components/FeatureLayout';
 import { UserPlus } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const CRM = () => {
+  const { t } = useTranslation();
+
   return (
     <FeatureLayout
-      title="CRM para negocios nocturnos"
-      subtitle="Una base de datos completa de clientes con historial de visitas, preferencias y comportamiento de compra para potenciar tus estrategias de marketing."
-      description="Nuestro CRM especializado en ocio nocturno te permite conocer a tus clientes como nunca antes. Captura datos desde la compra de entradas o check-in, perfila a tus clientes según sus hábitos de consumo, frecuencia de visitas y preferencias. Envía comunicaciones personalizadas por SMS o email con ofertas específicas para cada segmento y mide el resultado de tus campañas para optimizar continuamente."
+      title={t('features.crm.title')}
+      subtitle={t('features.crm.subtitle')}
+      description={t('features.crm.description')}
       icon={<UserPlus className="w-12 h-12 text-tango-purple" />}
       benefits={[
-        "Centraliza todos los datos de tus clientes en una sola plataforma.",
-        "Segmenta a tu audiencia según historial de compras, frecuencia, gasto medio y preferencias.",
-        "Envía comunicaciones personalizadas que aumenten la efectividad de tus campañas.",
-        "Identifica a tus clientes más valiosos y crea estrategias específicas para ellos.",
-        "Mide el ROI de tus acciones de marketing con precisión.",
-        "Integración total con el sistema de fidelización y ventas para una visión 360° del cliente."
+        t('features.crm.benefits.1'),
+        t('features.crm.benefits.2'),
+        t('features.crm.benefits.3'),
+        t('features.crm.benefits.4'),
+        t('features.crm.benefits.5'),
+        t('features.crm.benefits.6'),
       ]}
       useCases={[
         {

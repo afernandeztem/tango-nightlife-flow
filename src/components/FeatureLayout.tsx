@@ -5,6 +5,7 @@ import Footer from './Footer';
 import ContactForm from './ContactForm';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface FeatureLayoutProps {
   title: string;
@@ -27,6 +28,8 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = ({
   useCases,
   benefits,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -35,7 +38,7 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = ({
         <section className="pt-32 pb-16 md:pb-24 px-4 bg-gradient-to-br from-white via-purple-50 to-violet-100">
           <div className="container mx-auto">
             <Link to="/" className="inline-flex items-center text-tango-purple hover:text-tango-violet mb-8">
-              <ArrowLeft className="w-4 h-4 mr-2" /> Volver al inicio
+              <ArrowLeft className="w-4 h-4 mr-2" /> {t('common.backToHome')}
             </Link>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-2/3">
@@ -67,7 +70,7 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = ({
               </p>
 
               <h3 className="text-2xl font-bold mb-4 text-tango-purple">
-                Beneficios clave
+                {t('common.keyBenefits')}
               </h3>
               <ul className="list-disc list-inside mb-12 space-y-2">
                 {benefits.map((benefit, index) => (
@@ -84,7 +87,7 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = ({
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">
-              Lo que ofrecemos
+              {t('common.whatWeOffer')}
             </h2>
             
             <div className="space-y-16">

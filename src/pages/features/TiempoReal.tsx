@@ -2,21 +2,24 @@
 import React from 'react';
 import FeatureLayout from '@/components/FeatureLayout';
 import { BarChart3 } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const TiempoReal = () => {
+  const { t } = useTranslation();
+
   return (
     <FeatureLayout
-      title="Reporting en tiempo real"
-      subtitle="Dashboard con métricas clave e insights que te permiten tomar decisiones al momento para maximizar tu rentabilidad mientras el evento transcurre."
-      description="Nuestro sistema de reporting en tiempo real proporciona una visión instantánea de lo que está sucediendo en tu negocio mientras ocurre. Visualiza KPIs clave como ocupación, ventas por hora, eficiencia por barra y rentabilidad por productos. Compara resultados con periodos anteriores e identifica tendencias. Recibe alertas configurables cuando se alcanzan objetivos o aparecen anomalías que requieren tu atención inmediata."
+      title={t('features.realtime.title')}
+      subtitle={t('features.realtime.subtitle')}
+      description={t('features.realtime.description')}
       icon={<BarChart3 className="w-12 h-12 text-tango-purple" />}
       benefits={[
-        "Toma decisiones informadas al momento basadas en datos en tiempo real.",
-        "Ajusta precios y promociones durante el evento para optimizar ingresos.",
-        "Identifica cuellos de botella operativos antes de que afecten la experiencia del cliente.",
-        "Compara el rendimiento actual con datos históricos para contextualizar las métricas.",
-        "Recibe alertas automáticas sobre situaciones que requieren atención inmediata.",
-        "Acceso multiplataforma: visualiza tus datos desde cualquier dispositivo, en cualquier lugar."
+        t('features.realtime.benefits.1'),
+        t('features.realtime.benefits.2'),
+        t('features.realtime.benefits.3'),
+        t('features.realtime.benefits.4'),
+        t('features.realtime.benefits.5'),
+        t('features.realtime.benefits.6'),
       ]}
       useCases={[
         {
