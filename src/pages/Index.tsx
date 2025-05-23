@@ -27,15 +27,17 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      <main>
+      <main className="flex-1">
         <HeroSection />
-        <ProblemsSection />
-        <SolutionsSection />
-        <CasesSection />
-        <TestimonialsSection />
-        <ContactForm />
+        <div className="max-w-[1200px] mx-auto px-4">
+          <ProblemsSection />
+          <SolutionsSection />
+          <CasesSection />
+          <TestimonialsSection />
+          <ContactForm />
+        </div>
         <CTASection />
       </main>
       <Footer />

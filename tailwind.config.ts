@@ -26,6 +26,7 @@ export default {
 				tango: {
 					purple: '#2d0d63', // midnight purple
 					violet: '#6f3bff', // electric violet
+					pink: '#C5198F', // new brand color - vibrant magenta-pink
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
