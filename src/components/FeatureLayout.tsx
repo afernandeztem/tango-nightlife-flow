@@ -80,15 +80,15 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = ({
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Functionality Section */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">
-              Casos de uso reales
+              This is what we offer
             </h2>
             
             <div className="space-y-16">
-              {useCases.map((useCase, index) => (
+              {useCases.map((functionality, index) => (
                 <div 
                   key={index} 
                   className={`flex flex-col ${
@@ -97,18 +97,18 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = ({
                 >
                   <div className="md:w-1/2">
                     <img 
-                      src={useCase.image} 
-                      alt={useCase.title} 
+                      src={functionality.image} 
+                      alt={functionality.title} 
                       className="rounded-lg shadow-lg w-full"
                       loading="lazy"
                     />
                   </div>
                   <div className="md:w-1/2">
                     <h3 className="text-2xl font-bold mb-4 text-tango-purple">
-                      {useCase.title}
+                      {functionality.title}
                     </h3>
                     <p className="text-gray-700">
-                      {useCase.description}
+                      {functionality.description}
                     </p>
                   </div>
                 </div>
