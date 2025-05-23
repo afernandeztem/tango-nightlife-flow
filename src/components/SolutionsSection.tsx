@@ -57,6 +57,11 @@ const SolutionsSection = () => {
     }
   ];
 
+  const handleCardClick = () => {
+    // Scroll to top when navigating to a new page
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section id="soluciones" className="section-padding">
       <div className="container mx-auto">
@@ -71,7 +76,7 @@ const SolutionsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((solution) => (
-            <Link key={solution.id} to={solution.route}>
+            <Link key={solution.id} to={solution.route} onClick={handleCardClick}>
               <Card className="feature-card-hover overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <CardHeader className="pb-2">
                   <div className="flex items-center mb-2">
